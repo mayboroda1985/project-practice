@@ -1,0 +1,9 @@
+  @predefined1
+  Scenario: Predefined steps for Gibiru
+    Given I open url "http://gibiru.com"
+    Then I should see page title as "Gibiru"
+    Then element with xpath "//input[@id='q']" should be present
+    When I type "Behavior Driven Development" into element with xpath "//input[@id='q']"
+    Then I click on element using JavaScript with xpath "//input[@type='submit']"
+    Then I wait for element with xpath "//div[@id='links']" to not be present
+    Then element with xpath "//div[@id='links']" should contain text "Cucumber"
