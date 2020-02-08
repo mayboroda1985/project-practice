@@ -7,3 +7,13 @@
     Then I click on element using JavaScript with xpath "//input[@type='submit']"
     Then I wait for element with xpath "//div[@id='links']" to not be present
     Then element with xpath "//div[@id='links']" should contain text "Cucumber"
+
+@predefined2
+Scenario: Predefined steps for DuckDuckGo
+  Given I open url "https://duckduckgo.com/"
+  Then I should see page title as "DuckDuckGo"
+  Then element with xpath "//input[@name='q']" should be present
+  When I type "Behavior Driven Development" into element with xpath "//input[@name='q']"
+  Then I click on element using JavaScript with xpath "//input[@type='submit']"
+  And I wait for element with xpath "//div[@class='results js-results']" to be present
+  Then element with xpath "//div[@class='results js-results']" should contain text "Cucumber"
