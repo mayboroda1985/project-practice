@@ -1,3 +1,4 @@
+  all test cases
   @predefined1
   Scenario: Predefined steps for Gibiru
     Given I open url "http://gibiru.com"
