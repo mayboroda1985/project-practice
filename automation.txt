@@ -1,4 +1,4 @@
-  all test cases
+  all test cases and code
   @predefined1
   Scenario: Predefined steps for Gibiru
     Given I open url "http://gibiru.com"
@@ -28,3 +28,4 @@ Scenario: Predefined steps for DuckDuckGo
     Then I wait for element with xpath "//div[@id='res']" to be present
     Then element with xpath "//div[@id='res']" should contain text "Cucumber"
 
+will add more test cases
