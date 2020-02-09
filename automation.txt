@@ -28,3 +28,12 @@ Scenario: Predefined steps for DuckDuckGo
     Then I wait for element with xpath "//div[@id='res']" to be present
     Then element with xpath "//div[@id='res']" should contain text "Cucumber"
 
+  @predefined2
+  Scenario: Predefined steps for Bing
+    Given I open url "https://www.bing.com/"
+    Then I should see page title contains "Bing"
+    When I type "Behavior Driven Development" into element with xpath "//*[@name='q']"
+    When I click on element using JavaScript with xpath "//input[@id='sb_form_go']"
+    And I click on element with xpath "//input[@id='sb_form_go']"
+    Then I wait for element with xpath "//ol[@id='b_results']" to be present
+    Then element with xpath "//ol[@id='b_results']" should contain text "Cucumber"
